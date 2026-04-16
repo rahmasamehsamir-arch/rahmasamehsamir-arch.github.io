@@ -5,13 +5,13 @@
   font-family:'Times New Roman', Times, serif;
   }
 
-/* 🌐 BODY */
+
 body {
 height: 100vh;
 animation: fadeIn 1s ease-in;
 }
 
-/* 🔷 NAVBAR */
+
 .navbar {
 display: flex;
 justify-content: flex-end;
@@ -42,13 +42,13 @@ color: #ffd700;
 border-bottom: 2px solid white;
 }
 
-/* 📦 LAYOUT */
+
 .container {
 display: flex;
 min-height: calc(100vh - 70px);
 }
 
-/* 🔵 LEFT SIDE */
+
 .left {
 width: 40%;
 background: linear-gradient(135deg, #1e3cba, #2a2a9c);
@@ -166,9 +166,7 @@ transform: scale(1.05);
 background: #1a1a80;
 }
 
-/* ========================= */
-/* 📱 TABLET (≤ 992px) */
-/* ========================= */
+
 @media (max-width: 992px) {
 
 ```
@@ -199,9 +197,7 @@ background: #1a1a80;
 
 }
 
-/* ========================= */
-/* 📱 MOBILE (≤ 768px) */
-/* ========================= */
+
 @media (max-width: 768px) {
 
 ```
@@ -238,9 +234,7 @@ background: #1a1a80;
 
 }
 
-/* ========================= */
-/* 📱 SMALL MOBILE (≤ 480px) */
-/* ========================= */
+
 @media (max-width: 480px) {
 
 ```
