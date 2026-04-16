@@ -6,12 +6,22 @@
   font-family:'Times New Roman', Times, serif;
   }
 
-/* BODY */
+
 body {
 color: white;
-margin-top: 80px; /* space for fixed navbar */
+margin-top: 80px; 
+display: flex;
+  flex-direction: column;  
+}
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
+
+main {
+    flex: 1;
+}
 .navbar {
     position: fixed !important;
     top: 0;
@@ -49,7 +59,12 @@ transition: 0.3s;
 .nav-links a:hover {
 color: #ffd700;
 }
-
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 /* ACTIVE */
 .nav-links .active {
 background: white;
