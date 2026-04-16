@@ -10,7 +10,8 @@
 body {
 color: white;
 margin-top: 80px; 
-
+display: flex;
+    flex-direction: column;
 }
 
 
@@ -72,7 +73,8 @@ color: #4c4c8a;
 }
 
 .hero {
-    min-height: 100vh;
+
+    min-height: calc(100vh - 80px);
     background: url("img/Capture2.jpg") center/cover no-repeat;
     position: relative;
     display: flex;
@@ -80,7 +82,14 @@ color: #4c4c8a;
     padding: 0 60px;
 }
 
+html, body {
+    height: 100%;
+}
 
+
+main {
+    flex: 1;
+}
 /* OVERLAY */
 .overlay {
 position: absolute;
