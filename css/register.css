@@ -9,7 +9,20 @@
 body {
 margin-top: 70px;
 animation: fadeIn 1s ease-in;
+  display: flex;
+    flex-direction: column;
 }
+  html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+main {
+    flex: 1;
+}
+
 
 /* NAVBAR */
 .navbar {
@@ -56,7 +69,12 @@ color: #ffd700;
 .nav-links .active {
 border-bottom: 2px solid white;
 }
-
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 /* LAYOUT */
 .container {
 display: flex;
