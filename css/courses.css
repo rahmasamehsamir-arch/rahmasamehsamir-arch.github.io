@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: #4c4c8a;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.nav-links .active {
+    border-bottom: 2px solid white;
+}
+body {
+   background-color: rgba(8, 0, 255, 0.695);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+.header span {
+    color: #4c4c8a;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #777;
+}
+
+/* COURSES GRID */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 40px 80px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* INFO */
+.info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info h3 {
+    font-size: 18px;
+}
+
+.info p {
+    color: #4c4c8a;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: #eee;
+}
+/* 📱 Tablets */
+@media (max-width: 992px) {
+
+    .courses {
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .courses-table th,
+    .courses-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* HEADER */
+    .header {
+        padding: 30px 10px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    /* TABLE → scroll بدل ما يبوظ */
+    .courses {
+        overflow-x: auto;
+    }
+
+    .courses-table {
+        min-width: 600px;
+    }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 480px) {
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .courses-table th,
+    .courses-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+/* ✨ FADE IN PAGE */
+body {
+    animation: fadeIn 1s ease-in;
+    background-color: rgb(18, 6, 105);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ✨ NAVBAR SLIDE DOWN */
+.navbar {
+    animation: slideDown 0.7s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ✨ HEADER TEXT ANIMATION */
+.header h1 {
+    animation: fadeUp 1s ease;
+}
+
+.header p {
+    animation: fadeUp 1.3s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ✨ TABLE ROWS APPEAR ONE BY ONE */
+.courses-table tbody tr {
+    animation: rowFade 0.6s ease forwards;
+    opacity: 0;
+}
+
+.courses-table tbody tr:nth-child(1) { animation-delay: 0.2s; }
+.courses-table tbody tr:nth-child(2) { animation-delay: 0.4s; }
+.courses-table tbody tr:nth-child(3) { animation-delay: 0.6s; }
+.courses-table tbody tr:nth-child(4) { animation-delay: 0.8s; }
+.courses-table tbody tr:nth-child(5) { animation-delay: 1s; }
+.courses-table tbody tr:nth-child(6) { animation-delay: 1.2s; }
+
+@keyframes rowFade {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ✨ BUTTON HOVER SMOOTH */
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ✨ LINK HOVER SMOOTH */
+.nav-links a {
+    transition: 0.3s;
+}
