@@ -1,261 +1,100 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+  }
+
+/* 🌐 BODY */
+body {
+height: 100vh;
+animation: fadeIn 1s ease-in;
 }
+
+/* 🔷 NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 15px 60px;
-    background: #2a2a9c;
-    color: white;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 15px 60px;
+background: #2a2a9c;
+color: white;
+animation: slideDown 0.7s ease;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+list-style: none;
+display: flex;
+gap: 30px;
 }
 
 .nav-links a {
-    color: rgb(233, 228, 228);
-    text-decoration: none;
-    transition: 0.3s;
-
+color: rgb(233, 228, 228);
+text-decoration: none;
+transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ffd700;
+color: #ffd700;
 }
 
 .nav-links .active {
-    border-bottom: 2px solid white;
-}
-body {
-    height: 100vh;
+border-bottom: 2px solid white;
 }
 
-/* Layout */
+/* 📦 LAYOUT */
 .container {
-    display: flex;
-   min-height: calc(100vh - 70px);
+display: flex;
+min-height: calc(100vh - 70px);
 }
 
-/* LEFT SIDE */
+/* 🔵 LEFT SIDE */
 .left {
-    width: 40%;
-    background: linear-gradient(135deg, #1e3cba, #2a2a9c);
-    color: white;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+width: 40%;
+background: linear-gradient(135deg, #1e3cba, #2a2a9c);
+color: white;
+padding: 40px;
+display: flex;
+flex-direction: column;
 }
 
 .top-links {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 40px;
-    opacity: 0.8;
+display: flex;
+gap: 30px;
+margin-bottom: 40px;
+opacity: 0.8;
 }
 
 .content h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
+font-size: 50px;
+margin-bottom: 10px;
+animation: fadeUp 1s ease;
 }
 
 .subtitle {
-    font-size: 18px;
-    margin-bottom: 10px;
+font-size: 18px;
+margin-bottom: 10px;
+animation: fadeUp 1.2s ease;
 }
 
 .line {
-    width: 60px;
-    height: 3px;
-    background: white;
-    margin-bottom: 30px;
+width: 60px;
+height: 3px;
+background: white;
+margin-bottom: 30px;
+animation: fadeUp 1.4s ease;
 }
 
 /* INFO */
 .info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+display: flex;
+flex-direction: column;
+gap: 25px;
 }
 
-.item h3 {
-    font-size: 20px;
-}
-
-.item p {
-    opacity: 0.8;
-}
-
-/* RIGHT SIDE */
-.right {
-    width: 60%;
-    background: #f3f3f3;
-    padding: 60px;
-}
-
-/* FORM HEADER */
-.form-header {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 30px;
-}
-
-.form-header h2 {
-    background: #1e3cba;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 20px;
-}
-
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-input, textarea {
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-textarea {
-    height: 120px;
-    resize: none;
-}
-
-/* BUTTON */
-button {
-    margin-top: 20px;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    background: #1e3cba;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-/* 📱 Tablets */
-@media (max-width: 992px) {
-
-    .courses {
-        padding: 20px;
-    }
-
-    .navbar {
-        padding: 15px 30px;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .header h1 {
-        font-size: 28px;
-    }
-
-    .courses-table th,
-    .courses-table td {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-
-/* 📱 Mobile */
-@media (max-width: 768px) {
-
-    /* NAVBAR */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* HEADER */
-    .header {
-        padding: 30px 10px;
-    }
-
-    .header h1 {
-        font-size: 24px;
-    }
-
-    /* TABLE → scroll بدل ما يبوظ */
-   
-
-/* 📱 Small Mobile */
-@media (max-width: 480px) {
-
-    .header h1 {
-        font-size: 20px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    
-}}
-/* ✨ PAGE FADE IN */
-body {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* ✨ NAVBAR SLIDE */
-.navbar {
-    animation: slideDown 0.7s ease;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* ✨ LEFT SIDE TEXT */
-.content h1 {
-    animation: fadeUp 1s ease;
-}
-
-.subtitle {
-    animation: fadeUp 1.2s ease;
-}
-
-.line {
-    animation: fadeUp 1.4s ease;
-}
-
-/* ✨ CONTACT INFO */
 .item {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
+animation: fadeUp 1s ease forwards;
+opacity: 0;
 }
 
 .item:nth-child(1) { animation-delay: 0.3s; }
@@ -263,47 +102,202 @@ body {
 .item:nth-child(3) { animation-delay: 0.9s; }
 .item:nth-child(4) { animation-delay: 1.2s; }
 
-/* ✨ FORM APPEAR */
+/* 🔶 RIGHT SIDE */
 .right {
-    animation: fadeRight 1s ease;
+width: 60%;
+background: #f3f3f3;
+padding: 60px;
+animation: fadeRight 1s ease;
 }
 
-@keyframes fadeRight {
-    from {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+/* FORM HEADER */
+.form-header {
+display: flex;
+justify-content: flex-end;
+margin-bottom: 30px;
 }
 
-/* ✨ INPUT FOCUS EFFECT */
-input:focus, textarea:focus {
-    outline: none;
-    border: 2px solid #2a2a9c;
-    transition: 0.3s;
+.form-header h2 {
+background: #1e3cba;
+color: white;
+padding: 10px 25px;
+border-radius: 20px;
 }
 
-/* ✨ BUTTON HOVER */
+/* FORM */
+form {
+display: flex;
+flex-direction: column;
+}
+
+label {
+margin: 10px 0 5px;
+color: #333;
+}
+
+input, textarea {
+padding: 15px;
+border-radius: 20px;
+border: none;
+margin-bottom: 10px;
+width: 100%;
+}
+
+textarea {
+height: 120px;
+resize: none;
+}
+
+/* BUTTON */
 button {
-    transition: 0.3s;
+margin-top: 20px;
+padding: 15px;
+border: none;
+border-radius: 25px;
+background: #1e3cba;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.05);
-    background: #1a1a80;
+transform: scale(1.05);
+background: #1a1a80;
 }
 
-/* ✨ GENERAL FADE UP */
+/* ========================= */
+/* 📱 TABLET (≤ 992px) */
+/* ========================= */
+@media (max-width: 992px) {
+
+```
+.navbar {
+    padding: 15px 30px;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.left, .right {
+    width: 100%;
+}
+
+.left {
+    padding: 30px;
+}
+
+.right {
+    padding: 30px;
+}
+
+.content h1 {
+    font-size: 36px;
+}
+```
+
+}
+
+/* ========================= */
+/* 📱 MOBILE (≤ 768px) */
+/* ========================= */
+@media (max-width: 768px) {
+
+```
+/* NAVBAR STACK */
+.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nav-links {
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* STACK EVERYTHING */
+.container {
+    flex-direction: column;
+}
+
+.left, .right {
+    width: 100%;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 28px;
+}
+
+.subtitle {
+    font-size: 16px;
+}
+```
+
+}
+
+/* ========================= */
+/* 📱 SMALL MOBILE (≤ 480px) */
+/* ========================= */
+@media (max-width: 480px) {
+
+```
+.content h1 {
+    font-size: 22px;
+}
+
+.nav-links a {
+    font-size: 14px;
+}
+
+input, textarea {
+    padding: 12px;
+}
+
+button {
+    padding: 12px;
+}
+```
+
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes slideDown {
+from {
+transform: translateY(-50px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+
 @keyframes fadeUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+from {
+transform: translateY(30px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+
+@keyframes fadeRight {
+from {
+transform: translateX(50px);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
 }
